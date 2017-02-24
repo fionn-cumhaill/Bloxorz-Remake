@@ -1,0 +1,70 @@
+README
+
+Basic Controls -
+_________________________________________________________________________________________________________________________________________________
+
+UP - Move Block along +y axis
+DOWN - Move Block along -y axis
+LEFT - Move Block along -x axis
+RIGHT - Move Block along +x axis
+
+O - Top View (Orthographic)
+P - Tower View (Perspective)
+
+W - Block view (Looking in +y direction) 
+A - Block view (Looking in -x direction)
+S - Block view (Looking in -y direction)
+D - Block view (Looking in +x direction)
+
+U - Follow-cam / Chase view (Looking in +y direction) 
+H - Follow-cam / Chase view (Looking in -x direction)
+J - Follow-cam / Chase view (Looking in -y direction)
+K - Follow-cam / Chase view (Looking in +x direction)
+
+V - Helicopter view
+R - Rotate Helicopter view counter-clockwise in x-y plane about block as pivot
+T - Rotate Helicopter view clockwise in x-y plane about block as pivot
+
+Scroll Up - Decrease Z value of Helicopter View (Gets closer to Block)
+Scroll Down - Increase Z value of Helicopter View (Moves away from Block)
+Left Click and Drag - Rotate Helicopter view (X-Y values of Cursor become X-Y values of Helicopter Cam)
+
+Basic Game Info
+_________________________________________________________________________________________________________________________________________________
+
+Normal Blocks - Green in colour
+Level completed if block is standing vertically over goal hole
+Level failed (and game over) if any part of the block is not on a tile, except when that part is over the goal hole
+
+Light Bridge Switch (and corresponding Bridge) - Grey in colour
+Light Bridge is created if block lands over Light Switch in ANY ORIENTATION
+
+Heavy Bridge Switch (and corresponding Bridge) - Magenta in colour
+Heavy Bridge is created if block lands over Light Switch ONLY IN VERTICAL ORIENTATION
+
+Fragile Tiles - Orange in colour
+Level failed if Block lands over fragile tile in VERTICAL ORIENTATION
+
+Bridges appear in level 2, and Fragile tiles in level 3
+
+Code file and execution
+_________________________________________________________________________________________________________________________________________________
+
+The code file is named bloxorz.cpp.
+The executable is named Bloxorz.
+The command "make; ./Bloxorz" may be executed in the source directory to run the game.
+
+Extra Features Summarised:
+_________________________________________________________________________________________________________________________________________________
+
+1. Total of 9 levels created as of now which are not hard coded. Level data contained in text files and therefore, new levels can be created without changing the code.
+ 
+2. The Text |LEVEL X| where X is the level number is displayed for 3 seconds at the beginning of every level. CONTROLS ARE DISABLED DURING THIS PERIOD. This is made in a 7 - Segment Display fashion.
+
+3. Two types of Bridges created - Heavy and Light
+
+4. A 7 - Segment display move count board which constantly displays current move count (3 Digits). This occupies the right half of the window, and is unaffected by the various camera views available in game (Use of multiple Viewports).
+
+5. Music plays in the background if libmpg123-dev and libao-dev are installed. Since the server doesn't support these libraries, this part of the code is commented.
+
+
